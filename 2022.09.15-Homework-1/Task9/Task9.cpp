@@ -3,13 +3,11 @@
 
 #include <iostream>
 
-using namespace std;
-
-long long x;
 int main(int argc, char **argv)
 {
-	cin >> x;
+	long long x = 0;
+	std::cin >> x;
 	long long a = x * x;
-	cout << a * (a + x + 1) + x + 1 << endl;
+	std::cout << a * (a + x + 1) + x + 1 << std::endl;
 	return EXIT_SUCCESS;
 }
