@@ -1,10 +1,10 @@
 ﻿#include <iostream>
 
-using namespace std;
-int n, k;
 int main(int argc, char **argv)
 {
-	cin >> n >> k;
-	cout << (int)k / n << endl;
+	int n = 0;
+	int k = 0;
+	std::cin >> n >> k;
+	std::cout << (int)k / n << std::endl;
 	return EXIT_SUCCESS;
 }
