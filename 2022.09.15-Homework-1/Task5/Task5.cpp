@@ -2,11 +2,11 @@
 //
 
 #include<iostream>
-using namespace std;
-int a;
+
 int main(int argc, char **argv)
 {
-	cin >> a;
-	cout << (int)(a / 100) + (int)(a / 10) % 10 + a % 10 << endl;
+	int a = 0;
+	std::cin >> a;
+	std::cout << (int)(a / 100) + (int)(a / 10) % 10 + a % 10 << std::endl;
 	return EXIT_SUCCESS;
 }

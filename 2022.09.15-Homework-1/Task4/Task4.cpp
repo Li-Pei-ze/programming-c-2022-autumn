@@ -1,13 +1,12 @@
 ﻿#include <iostream>
 
-using namespace std;
-
-int speed, ti;
 int main(int argc, char **argv)
 {
-    cin >> speed >> ti;
+    int speed = 0;
+    int ti = 0;
+    std::cin >> speed >> ti;
     int ans = (speed * ti) % 109;
-    if (ans < 0) ans += 109;
-    cout << ans << endl;
+    ans += (ans < 0) * 109;
+    std::cout << ans << std::endl;
     return EXIT_SUCCESS;
 }
