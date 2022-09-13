@@ -4,9 +4,9 @@
 #include <iostream>
 using namespace std;
 int a;
-int main()
+int main(int argc, char **argv)
 {
 	cin >> a;
 	cout << a + (a + 1) % 2 + 1 << endl;
-	return 0;
+	return EXIT_SUCCESS;
 }
