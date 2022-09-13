@@ -3,48 +3,45 @@
 
 #include <iostream>
 
-using namespace std;
 
-long long p0, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20,
-p21, p22, p23, p24, p25, p26, p27, p28, p29, p30;
-
-long long a, b, c;
 int main(int argc, char **argv)
 {
-	p0 = 1;
-	p1 = p0 * 2;
-	p2 = p1 * 2;
-	p3 = p2 * 2;
-	p4 = p3 * 2;
-	p5 = p4 * 2;
-	p6 = p5 * 2;
-	p7 = p6 * 2;
-	p8 = p7 * 2;
-	p9 = p8 * 2;
-	p10 = p9 * 2;
-	p11 = p10 * 2;
-	p12 = p11 * 2;
-	p13 = p12 * 2;
-	p14 = p13 * 2;
-	p15 = p14 * 2;
-	p16 = p15 * 2;
-	p17 = p16 * 2;
-	p18 = p17 * 2;
-	p19 = p18 * 2;
-	p20 = p19 * 2;
-	p21 = p20 * 2;
-	p22 = p21 * 2;
-	p23 = p22 * 2;
-	p24 = p23 * 2;
-	p25 = p24 * 2;
-	p26 = p25 * 2;
-	p27 = p26 * 2;
-	p28 = p27 * 2;
-	p29 = p28 * 2;
-	p30 = p29 * 2;
+	long long p0 = 1;
+	long long p1 = p0 * 2;
+	long long p2 = p1 * 2;
+	long long p3 = p2 * 2;
+	long long p4 = p3 * 2;
+	long long p5 = p4 * 2;
+	long long p6 = p5 * 2;
+	long long p7 = p6 * 2;
+	long long p8 = p7 * 2;
+	long long p9 = p8 * 2;
+	long long p10 = p9 * 2;
+	long long p11 = p10 * 2;
+	long long p12 = p11 * 2;
+	long long p13 = p12 * 2;
+	long long p14 = p13 * 2;
+	long long p15 = p14 * 2;
+	long long p16 = p15 * 2;
+	long long p17 = p16 * 2;
+	long long p18 = p17 * 2;
+	long long p19 = p18 * 2;
+	long long p20 = p19 * 2;
+	long long p21 = p20 * 2;
+	long long p22 = p21 * 2;
+	long long p23 = p22 * 2;
+	long long p24 = p23 * 2;
+	long long p25 = p24 * 2;
+	long long p26 = p25 * 2;
+	long long p27 = p26 * 2;
+	long long p28 = p27 * 2;
+	long long p29 = p28 * 2;
+	long long p30 = p29 * 2;
 
-	cin >> a >> b;
-	c = 0;
+	long long a = 0;
+	long long b = 0;
+	long long c = 0;
+	std::cin >> a >> b;
 	c += (p30 * b <= a) * p30;
 	a -= (p30 * b <= a) * p30 * b;
 	c += (p29 * b <= a) * p29;
@@ -107,6 +104,6 @@ int main(int argc, char **argv)
 	a -= (p1 * b <= a) * p1 * b;
 	c += (p0 * b <= a) * p0;
 	a -= (p0 * b <= a) * p0 * b;
-	cout << c << endl;
+	std::cout << c << std::endl;
 	return EXIT_SUCCESS;
 }
