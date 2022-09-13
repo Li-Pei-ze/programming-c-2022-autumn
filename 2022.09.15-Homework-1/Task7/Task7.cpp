@@ -3,15 +3,14 @@
 
 #include <iostream>
 
-using namespace std;
-
 int main(int argc, char **argv)
 {
-	int a, b;
-	cin >> a >> b;
+	int a = 0;
+	int b = 0;
+	std::cin >> a >> b;
 	int t = a;
 	a = b;
 	b = t;
-	cout << a << b << endl;
+	std::cout << a << b << std::endl;
 	return EXIT_SUCCESS;
 }
