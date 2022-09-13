@@ -49,7 +49,6 @@ int main(int argc, char **argv)
         default:
             break;
         }
-        exit(0);
     }
     else
     {
@@ -184,7 +183,7 @@ int main(int argc, char **argv)
                 default:
                     break;
                 }
-            exit(0);
+
             }
             else
             {
