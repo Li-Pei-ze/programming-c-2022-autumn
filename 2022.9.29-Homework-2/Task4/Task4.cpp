@@ -1,35 +1,22 @@
 ﻿#include <iostream>
 
-int main(int argc, char **argv)
+void han(int n, int from, int to)
 {
-	int a = 0;
-	int b = 0;
-	int c = 0;
-	int d = 0;
-
-	std::cin >> a >> b >> c >> d;
-
-	if (a == 0 && b == 0)
+	if (n == 1)
 	{
-		std::cout << "INF" << std::endl;
+		std::cout << "Disk 1 move from" << " " << from << " to " << to << std::endl;
+		return;
 	}
-	else {
-		if (a == 0 || b * c == a * d)
-		{
-			std::cout << "NO" << std::endl;
-		}
-		else
-		{
-			if (b % a == 0)
-			{
-				std::cout << -(int)(b / a) << std::endl;
-			}
-			else
-			{
-				std::cout << "NO" << std::endl;
-			}
-		}
-	}
+	int tmp = 6 - to - from;
+	han(n - 1, from, tmp);
+	std::cout << "Disk " << n << " move from " << from << " to " << to << std::endl;
+	han(n - 1, tmp, to);
+}
 
+int main(int argc, char** argv)
+{
+	int n = 0;
+	std::cin >> n;
+	han(n, 1, 2);
 	return EXIT_SUCCESS;
 }

@@ -1,6 +1,6 @@
 #include <iostream>
 
-void star(char* s1, char* s2, int d)
+void put(char* s1, char* s2, int d)
 {
 	s2[2 * d] = s1[d];
 
@@ -10,8 +10,7 @@ void star(char* s1, char* s2, int d)
 	}
 
 	s2[2 * d + 1] = '*';
-
-	star(s1, s2, d + 1);
+	put(s1, s2, d + 1);
 }
 
 int main(int argc, char* argv[])
@@ -21,9 +20,9 @@ int main(int argc, char* argv[])
 
 	std::cin >> s1;
 
-	star(s1, s2, 0);
+	put(s1, s2, 0);
 
-	std::cout << s2;
+	std::cout << s2 << std::endl;
 
 	return EXIT_SUCCESS;
 }
