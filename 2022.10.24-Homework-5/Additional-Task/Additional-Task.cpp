@@ -6,8 +6,8 @@
 
 int main(int argc, char** argv)
 {
-	int f[101];
-	int a[101];
+	int f[101]{};
+	int a[101]{};
 	int n = 0;
 	std::cin >> n;
 	for (int i = 1; i <= n; ++i)
@@ -23,6 +23,6 @@ int main(int argc, char** argv)
 				f[i] = f[j] + (i - j) * a[i];
 			}
 		}
-	std::cout << f[n]  << std::endl;
+	std::cout << f[n] << std::endl;
 	return EXIT_SUCCESS;
 }
