@@ -17,7 +17,8 @@ int main(int argc, char** argv)
 
 	for (int i = 1; i <= m; ++i)
 	{
-		int x, y;
+		int x = 0;
+		int y = 0;
 		std::cin >> x >> y;
 		for (int j = x; j <= y; ++j)
 		{
