@@ -6,15 +6,15 @@
 
 int main(int argc, char** argv)
 {
-	int f[101]{};
-	int a[101]{};
+	int f[101]{ 0 };
+	int a[101]{ 0 };
 	int n = 0;
 	std::cin >> n;
 	for (int i = 1; i <= n; ++i)
 	{
 		std::cin >> a[i];
 	}
-	memset(f, 0, sizeof f);
+
 	for (int i = 1; i <= n; ++i)
 		for (int j = 0; j < i; ++j)
 		{
