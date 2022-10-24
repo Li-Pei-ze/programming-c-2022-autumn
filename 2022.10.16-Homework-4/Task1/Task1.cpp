@@ -1,11 +1,8 @@
-﻿// Task1.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-//
-
-#include <iostream>
+﻿#include <iostream>
 
 int main(int argc, char** argv)
 {
-	int n;
+	int n = 0;
 	std::cin >> n;
 	int i = 1;
 	int sum = 0;
