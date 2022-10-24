@@ -2,13 +2,13 @@
 
 char getm(char* s, int i)
 {
-	if (*(s + i + 1) == 0)
+	if (s[i+1] == 0)
 	{
-		return *(s + i);
+		return s[i];
 	}
-	if (*(s + i) > *(s + i + 1))
+	if (s[i] > s[i+1])
 	{
-		*(s + i + 1) = *(s + i);
+		s[i+1] = s[i];
 	}
 	getm(s, i + 1);
 }
