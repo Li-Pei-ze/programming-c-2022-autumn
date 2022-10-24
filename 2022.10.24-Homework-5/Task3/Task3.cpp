@@ -9,8 +9,8 @@ int main(int argc, char** argv)
 	{
 		std::cin >> a[i];
 	}
-	int maxnum = -INT_MAX;
-	int minnum = INT_MAX;
+	int maxnum = -1000000;
+	int minnum = 1000000;
 	for (int i = 1; i <= n; ++i)
 	{
 		if (a[i] > maxnum)

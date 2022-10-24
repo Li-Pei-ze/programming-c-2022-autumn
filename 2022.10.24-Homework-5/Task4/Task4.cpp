@@ -10,7 +10,7 @@ int main(int argc, char** argv)
 	{
 		std::cin >> a[i];
 	}
-	int maxnum = -INT_MAX;
+	int maxnum = -1000000;
 	for (int i = 2; i < n; ++i)
 	{
 		if (a[i] + a[i - 1] + a[i + 1] > maxnum)

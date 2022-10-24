@@ -11,7 +11,7 @@ int main(int argc, char** argv)
 	}
 	int num = 0;
 	std::cin >> num;
-	int mindis = INT_MAX;
+	int mindis = 100000000;
 	int minind = 0;
 	for (int i = 1; i <= n; ++i)
 	{
