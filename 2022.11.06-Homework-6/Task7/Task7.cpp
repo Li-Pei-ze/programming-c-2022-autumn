@@ -4,12 +4,9 @@ int main(int argc, char** argv)
 {
 	int n;
 	int a[100]{ 0 };
-	int minn = 0;
-	int maxn = 0;
-	int minind = 0;
-	int maxind = 0;
+	
 	int sum = 0;
-	int p = 0;
+	
 	
 	std::cin >> n;
 
@@ -21,6 +18,10 @@ int main(int argc, char** argv)
 			sum += a[i];
 		}
 	}
+	int minn = 0;
+	int maxn = 0;
+	int minind = 0;
+	int maxind = 0;
 
 	minn = maxn = a[0];
 	minind = maxind = 0;
@@ -39,7 +40,7 @@ int main(int argc, char** argv)
 		}
 	}
 
-	p = 1;
+	int p = 1;
 
 	if (minind > maxind)
 	{
