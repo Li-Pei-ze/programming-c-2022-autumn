@@ -6,10 +6,7 @@
 int main(int argc, char** argv)
 {
 	int n = 0;
-	int length = 1;
-	int pid = 0;
-	int old = 0;
-	int ca = 0;
+	
 	int a[100]{ 0 };
 
 	std::cin >> n;
@@ -20,6 +17,11 @@ int main(int argc, char** argv)
 	}
 
 	int val = a[0];
+
+	int length = 1;
+	int pid = 0;
+	int old = 0;
+	int ca = 0;
 
 	while (old != n - 1)
 	{

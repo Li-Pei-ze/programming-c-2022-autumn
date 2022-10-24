@@ -1,11 +1,8 @@
-﻿// Task5.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-//
-
-#include <iostream>
+﻿#include <iostream>
 
 int main(int argc, char** argv)
 {
-	int n;
+	int n = 0;
 	int odd = 0, even = 0;
 
 	std::cin >> n;

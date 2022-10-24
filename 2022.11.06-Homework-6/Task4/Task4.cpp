@@ -1,8 +1,4 @@
-﻿// Task4.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-//
-
-#include <iostream>
-#include <algorithm>
+﻿#include <iostream>
 
 int main(int argc, char** argv)
 {
@@ -16,20 +12,27 @@ int main(int argc, char** argv)
 		a[i] = i;
 	}
 
-	int A;
-	int B;
-	int C;
-	int D;
+	int aa = 0;
+	int bb = 0;
+	int cc = 0;
+	int dd = 0;
 	
-	std::cin >> A >> B >> C >> D;
+	std::cin >> aa >> bb >> cc >> dd;
 	
 
-	for (int i = A; i < B - ((B - A) >> 1); ++i)
-		std::swap(a[i], a[B - i + A]);
+	for (int i = aa; i < bb - ((bb - aa) >> 1); ++i)
+	{
+		int t = a[i];
+		a[i] = a[bb - i + aa];
+		a[bb - i + aa] = t;
+	}
 
-	for (int i = C; i < D - ((D - C) >> 1); ++i)
-		std::swap(a[i], a[D - i + C]);
-
+	for (int i = cc; i < dd - ((dd - cc) >> 1); ++i)
+	{
+		int t = a[i];
+		a[i] = a[dd - i + cc];
+		a[dd - i + cc] = t;
+	}
 	for (int i = 1; i <= n; ++i)
 		std::cout << a[i] << " ";
 	return EXIT_SUCCESS;
