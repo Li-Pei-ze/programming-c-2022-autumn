@@ -20,10 +20,14 @@ int main(int argc, char** argv)
 	}
 
 	for (int i = 1; i <= odd; ++i)
+	{
 		std::cout << o[i] << " ";
+	}
 	std::cout << std::endl;
 	for (int i = 1; i <= even; ++i)
+	{
 		std::cout << e[i] << " ";
+	}
 	std::cout << std::endl;
 	if (odd > even)
 		std::cout << "NO" << std::endl;
