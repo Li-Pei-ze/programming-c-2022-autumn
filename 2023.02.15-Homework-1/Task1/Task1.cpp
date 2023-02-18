@@ -30,7 +30,7 @@ struct Animal
 	}
 	void elderAnimal()
 	{
-		age += 1;
+		age++;
 	}
 };
 
