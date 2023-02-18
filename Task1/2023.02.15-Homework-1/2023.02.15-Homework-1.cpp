@@ -8,9 +8,9 @@ struct Animal
 	int age;
 	Animal()
 	{
-		this->type = "cat";
-		this->name = "Barsik";
-		this->age = 10;
+		this->type = "dog";
+		this->name = "wtf";
+		this->age = 1000;
 	}
 	Animal(std::string type, std::string name, int age)
 	{
@@ -18,11 +18,11 @@ struct Animal
 		this->name = name;
 		this->age = age;
 	}
-	Animal(const Animal& Creature)
+	Animal(const Animal& zhiv)
 	{
-		this->type = Creature.type;
-		this->name = Creature.name;
-		this->age = Creature.age;
+		this->type = zhiv.type;
+		this->name = zhiv.name;
+		this->age = zhiv.age;
 	}
 	~Animal()
 	{
@@ -34,18 +34,18 @@ struct Animal
 	}
 };
 
-void printAnimal(struct Animal Creature)
+void printAnimal(struct Animal zhiv)
 {
-	std::cout << Creature.type << " " << Creature.name << " " << Creature.age << std::endl;
+	std::cout << zhiv.type << " " << zhiv.name << " " << zhiv.age << std::endl;
 }
 
 int main(int argc, char* argv[])
 {
 	Animal Default;
 	printAnimal(Default);
-	Animal Birdie("parrot", "Kesha", 3);
-	Birdie.elderAnimal();
-	printAnimal(Birdie);
+	Animal AA("haha", "asda", 123);
+	AA.elderAnimal();
+	printAnimal(AA);
 
 	return EXIT_SUCCESS;
 }
