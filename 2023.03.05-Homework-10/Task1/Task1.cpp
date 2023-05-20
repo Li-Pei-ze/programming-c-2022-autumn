@@ -41,7 +41,7 @@ int main(int argc, char** argv)
 
 	for (int i = 0; i < 100; ++i)
 	{
-		if (arr[i]->getPower() > prevpow)
+		if (arr[i]->getPower() % rand() > prevpow)
 		{
 			arr[i]->Mighter(prevpow);
 			j = i;
@@ -50,7 +50,25 @@ int main(int argc, char** argv)
 		else
 		{
 			j = i;
+			prevpow = arr[i]->getPower() * 2;
+		}
+	}
+
+	j = -1;
+	prevpow = 0;
+
+	for (int i = 0; i < 100; ++i)
+	{
+		if (arr[i]->getPower() / (rand() + 1) > prevpow)
+		{
+			arr[i]->Mighter(prevpow);
+			j = i;
 			prevpow = arr[i]->getPower();
+		}
+		else
+		{
+			j = i;
+			prevpow = arr[i]->getPower() / 2;
 		}
 	}
 
