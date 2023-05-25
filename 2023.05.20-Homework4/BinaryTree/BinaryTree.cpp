@@ -1,23 +1,12 @@
-﻿#include <iostream>
+// BinaryTree.cpp : Defines the entry point for the console application.
+//
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
 
 template<typename T = int>
 class BinaryTree
 {
-public:
-	BinaryTree() = default;
-	BinaryTree(const BinaryTree& bt);
-	BinaryTree(const T& theElement);
-
-	~BinaryTree();
-
-	void insert(const T& theElement);
-	void remove(const T& theElement);
-	void makeEmpty();
-	bool isFind(const T& theElement)  const;
-	void preOrder() const;
-	void inOrder() const;
-	void postOrder() const;
-
 
 private:
 
@@ -50,6 +39,35 @@ private:
 	void preOrder(BinaryNode* bNode) const;
 	void inOrder(BinaryNode* bNode) const;
 	void postOrder(BinaryNode* bNode) const;
+public:
+	BinaryTree() = default;
+	BinaryTree(const BinaryTree& bt);
+	BinaryTree(const T& theElement);
+
+	~BinaryTree();
+
+	void insert(const T& theElement);
+	void remove(const T& theElement);
+	void makeEmpty();
+	bool isFind(const T& theElement)  const;
+	void preOrder() const;
+	void inOrder() const;
+	void postOrder() const;
+
+	friend void putput(ostream &stream, BinaryNode* bNode)
+	{
+		if (nullptr != bNode)
+		{
+			putput(stream, bNode->leftNode);
+			stream << bNode->element << " ";
+			putput(stream, bNode->rightNode);
+		}
+	}
+	friend ostream& operator <<(ostream &stream, BinaryTree& Tree)
+	{
+		putput(stream, Tree.root);
+		return stream;
+	}
 };
 
 template <typename T>
@@ -278,16 +296,15 @@ void BinaryTree<T>::postOrder(BinaryNode* bNode) const
 
 int main(int argc, char** argv)
 {
-	int root = 5;
-	int a = 1, b = 2, c = 3, d = 4, e = 6, f = 8;
 
-	BinaryTree<int> bTree(root);
-	bTree.insert(a);
-	bTree.insert(b);
-	bTree.insert(c);
-	bTree.insert(d);
-	bTree.insert(e);
-	bTree.insert(f);
+	BinaryTree<int> bTree(5);
+	bTree.insert(1);
+	bTree.insert(3);
+	bTree.insert(4);
+	bTree.insert(6);
+	bTree.insert(4);
+	bTree.insert(2);
 	bTree.preOrder();
-	return EXIT_SUCCESS;
+	std::cout << bTree;
+	return 0;
 }

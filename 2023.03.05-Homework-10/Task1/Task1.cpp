@@ -39,6 +39,7 @@ int main(int argc, char** argv)
 	int j = -1;
 	int prevpow = 0;
 
+	//random race
 	for (int i = 0; i < 100; ++i)
 	{
 		if (arr[i]->getPower() % rand() > prevpow)
@@ -53,21 +54,20 @@ int main(int argc, char** argv)
 			prevpow = arr[i]->getPower() * 2;
 		}
 	}
-
+	//random race 2
 	j = -1;
 	prevpow = 0;
 
 	for (int i = 0; i < 100; ++i)
 	{
-		if (arr[i]->getPower() / (rand() + 1) > prevpow)
+		if (arr[i]->getPower() > prevpow)
 		{
 			arr[i]->Mighter(prevpow);
 			j = i;
-			prevpow = arr[i]->getPower();
+			prevpow = arr[i]->getPower() / (rand() + 1);
 		}
 		else
 		{
-			j = i;
 			prevpow = arr[i]->getPower() / 2;
 		}
 	}
