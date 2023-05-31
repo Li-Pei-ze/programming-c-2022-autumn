@@ -19,10 +19,10 @@ int main(int argc, char** argv)
     int n = 0;
     
     std::cin >> n;
-    int** arr = new int* [n];
+    int** arr = new int* [n] { 0 };
     for (int i = 0; i < n; ++i)
     {
-        arr[i] = new int[2];
+        arr[i] = new int[2] { 0 };
     }
     for (int i = 0; i < n; ++i)
     {
