@@ -5,10 +5,10 @@ int main(int argc, char* argv[])
     int n = 0;
     int m = 0;
     std::cin >> n >> m;
-    int** a = new int* [n];
+    int** a = new int* [n] { 0 };
     for (int i = 0; i < n; ++i)
     {
-        a[i] = new int[m];
+        a[i] = new int[m] { 0 };
     }
     for (int i = 0; i < n; ++i)
     {
