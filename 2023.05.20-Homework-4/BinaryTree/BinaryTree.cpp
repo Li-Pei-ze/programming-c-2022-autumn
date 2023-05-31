@@ -306,5 +306,5 @@ int main(int argc, char** argv)
 	bTree.insert(2);
 	bTree.preOrder();
 	std::cout << bTree;
-	return 0;
+	return EXIT_SUCCESS;
 }
